@@ -12,7 +12,7 @@ public class Hooks {
 //    }
 
 
-    @After("~@with1DifferentChar or @with4DifferentChar or @closeBrowser")
+    @After()
     public void tearDown(Scenario scenario){
         final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         if (scenario.isFailed()) {

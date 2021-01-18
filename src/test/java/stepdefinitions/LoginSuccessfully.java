@@ -1,2 +1,5 @@
-package stepdefinitions;public class LoginSuccessfully {
+package stepdefinitions;
+
+public class LoginSuccessfully {
+
 }
