@@ -4,6 +4,7 @@ package utilities;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
@@ -209,6 +210,13 @@ import java.util.function.Function;
 
         public static void getDataTable(List<Map<String, Object>> dataTable, Object name) {
             name = dataTable.get(0).get("name");
+        }
+        public static void loginWithUsernameAndPassword(String username,String password){
+            WebDriver driver = new ChromeDriver();
+            driver.get(ConfigReader.getProperty("gmi_url"));
+            Driver.getDriver().findElement(By.id("account-menu")).click();
+            Driver.getDriver().findElement(By.id("login-item")).click();
+           // Driver.getDriver().findElement(By.id(""))
         }
     }
 
