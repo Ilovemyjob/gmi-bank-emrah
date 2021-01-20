@@ -7,6 +7,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import pages.HomePage;
+import pages.SignIn;
 
 import java.io.File;
 import java.io.IOException;
@@ -217,6 +219,20 @@ import java.util.function.Function;
             Driver.getDriver().findElement(By.id("account-menu")).click();
             Driver.getDriver().findElement(By.id("login-item")).click();
            // Driver.getDriver().findElement(By.id(""))
+        }
+        //you can sign in to GmiBank app using this method with different role
+        public static void signInToApp(String username, String password) {
+            SignIn signIn = new SignIn();
+            HomePage homePage = new HomePage();
+            Driver.getDriver().get(ConfigReader.getProperty("gmi_url"));
+            ReusableMethods.waitFor(2);
+            homePage.userIcon.click();
+            ReusableMethods.waitFor(2);
+            homePage.signIn.click();
+
+            signIn.usernameBox.sendKeys(username);
+            signIn.passwordBox.sendKeys(password);
+            signIn.signInButton.click();
         }
     }
 
