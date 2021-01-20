@@ -51,6 +51,7 @@ public class US_15_stepdefinitions {
 
     @Then("verify if account able to see all accounts")
     public void verify_if_account_able_to_see_all_accounts() {
+        Assert.assertTrue(customerPageOmer.View_Transaction1.isDisplayed());
 
     }
 
