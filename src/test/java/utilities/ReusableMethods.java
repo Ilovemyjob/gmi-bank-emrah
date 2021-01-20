@@ -210,5 +210,19 @@ import java.util.function.Function;
         public static void getDataTable(List<Map<String, Object>> dataTable, Object name) {
             name = dataTable.get(0).get("name");
         }
+
+//        public static void clickWithTimeOut(WebElement element, int timeout) {
+//            for (int i = 0; i < timeout; i++) {
+//                try {
+//                    element.click();
+//                    return;
+//                } catch (WebDriverException e) {
+//                    wait(1);
+//                }
+//            }
+//        }
+
+//
+
     }
 

@@ -22,7 +22,7 @@ import utilities.ReusableMethods;
             glue = "stepdefinitions",
             tags = "@mali",
             dryRun = false,
-            publish = true
+            publish = false
     )
     public class Runner {
     }
