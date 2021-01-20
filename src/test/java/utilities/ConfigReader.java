@@ -30,8 +30,8 @@ public class ConfigReader {
         return properties.getProperty(key);
     }
     //TESTING IF OUR LOGIC WORKS
-    public static void main(String[] args) {
-        System.out.println(properties.getProperty("url"));
-    }
+//   public static void main(String[] args) {
+//        System.out.println(properties.getProperty("url"));
+//    }
 
 }
