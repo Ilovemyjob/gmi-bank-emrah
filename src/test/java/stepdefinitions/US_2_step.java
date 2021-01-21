@@ -15,7 +15,7 @@ public class US_2_step {
     US_2 us_2 = new US_2();
     @Given("User go to GMI BAnk homepage")
     public void userGoToGMIBAnkHomepage() {
-        Driver.getDriver().get(ConfigReader.getProperty("gmiBank_url"));
+        Driver.getDriver().get(ConfigReader.getProperty("gmi_url"));
 
     }
 

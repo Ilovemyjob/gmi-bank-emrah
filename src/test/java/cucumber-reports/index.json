@@ -1,0 +1,227 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13807000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on GmiBank hompage",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_is_on_gmi_bank_hompage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 75000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks user icon",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_clicks_user_icon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 117000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks sign in",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_clicks_sign_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-15T19:49:32.175Z",
+        "line": 11,
+        "name": "TC_001 User should access the application with valid credentials",
+        "description": "",
+        "id": "positive-test-for-login;tc-001-user-should-access-the-application-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 95000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user provide valid username",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_provide_valid_username()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 112000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user provide valid password",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_provide_valid_password()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 80000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user clicks sign in button",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_clicks_sign_in_button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 124000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user should be on user page",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_should_be_on_user_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mali"
+          },
+          {
+            "name": "@TEST_T28-25"
+          },
+          {
+            "name": "@TESTSET_T28-29"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 583000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on GmiBank hompage",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_is_on_gmi_bank_hompage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 140000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks user icon",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_clicks_user_icon()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#login\\-item\"}\n  (Session info: chrome\u003d87.0.4280.141)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-NH68CP9\u0027, ip: \u0027192.168.43.156\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_261\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\\Users\\YSMNI\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 77546dfe04033b89f35700b054892135\n*** Element info: {Using\u003did, value\u003dlogin-item}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat stepdefinitions.LoginSuccessfully.user_clicks_sign_in(LoginSuccessfully.java:31)\r\n\tat ✽.user clicks sign in(file:///C:/Users/YSMNI/IdeaProjects/gmi-bank/src/test/resources/features/LoginCucumber.feature:8)\r\n",
+              "duration": 10083000000,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "user clicks sign in",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_clicks_sign_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-15T19:49:46.754Z",
+        "line": 17,
+        "name": "TC_002 User can cancel to login with cancel button",
+        "description": "",
+        "id": "positive-test-for-login;tc-002-user-can-cancel-to-login-with-cancel-button",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "user clicks cancel button",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_clicks_cancel_button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "user should be on home page",
+            "match": {
+              "location": "stepdefinitions.LoginSuccessfully.user_should_be_on_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@mali"
+          },
+          {
+            "name": "@TEST_T28-26"
+          },
+          {
+            "name": "@TESTSET_T28-29"
+          }
+        ]
+      }
+    ],
+    "name": "Positive test for Login",
+    "description": "",
+    "id": "positive-test-for-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/LoginCucumber.feature",
+    "tags": [
+      {
+        "name": "@mali",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
