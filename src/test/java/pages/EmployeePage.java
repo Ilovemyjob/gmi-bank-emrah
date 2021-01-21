@@ -11,8 +11,8 @@ public class EmployeePage {
     }
     @FindBy(id = "entity-menu")
     public WebElement myOperationSegment;
-    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
-    public WebElement manageCustomerAsEmployee;
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement manageAccountAsEmployee;
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    public WebElement manageCustomerAsEmployee;
 }
