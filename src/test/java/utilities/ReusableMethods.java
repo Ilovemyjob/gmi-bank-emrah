@@ -213,6 +213,22 @@ import java.util.function.Function;
         public static void getDataTable(List<Map<String, Object>> dataTable, Object name) {
             name = dataTable.get(0).get("name");
         }
+
+
+//        public static void clickWithTimeOut(WebElement element, int timeout) {
+//            for (int i = 0; i < timeout; i++) {
+//                try {
+//                    element.click();
+//                    return;
+//                } catch (WebDriverException e) {
+//                    wait(1);
+//                }
+//            }
+//        }
+
+//
+
+
         public static void loginWithUsernameAndPassword(String username,String password){
             WebDriver driver = new ChromeDriver();
             driver.get(ConfigReader.getProperty("gmi_url"));
@@ -234,5 +250,6 @@ import java.util.function.Function;
             signIn.passwordBox.sendKeys(password);
             signIn.signInButton.click();
         }
+
     }
 

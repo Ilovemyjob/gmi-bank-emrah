@@ -2,6 +2,8 @@ package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -55,5 +57,15 @@ public class Driver {
             driver = null;
         }
     }
+//    public static void waitAndSendText(WebElement element, String text, int timeout) throws Exception {
+//        for (int i = 0; i < timeout; i++) {
+//            try {
+//                element.sendKeys(text);
+//                return;
+//            } catch (WebDriverException e) {
+//                wait(1);
+//            }
+//        }
+//    }
 }
 
