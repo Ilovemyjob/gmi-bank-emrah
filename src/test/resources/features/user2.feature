@@ -1,10 +1,10 @@
-@user2
+
   Feature: Go to Registration Page
     Background: User go to Registration Page
       Given User go to GMI BAnk homepage
       And User go to Registration page
 
-
+    @user2
     Scenario Outline: TC_01 Any field on the registration page should not be left blank
       And User enters SSN number "<ssnNumber>"
       And user enters firstname "<firstname>"
@@ -15,7 +15,6 @@
       And user enters email "<email>"
       And user enters new password "<password>"
       And user enters new password confirmation "<password>"
-
       And user clicks register
       Then user verifies SSN message
       Then user verifies firstname message
@@ -26,18 +25,18 @@
       Then user verifies email message
       Then user verifies new password message
       Then user verifies confirmation password message
-      Then And user verifies the visibility of message
+#      Then And user verifies the visibility of message
 
       Examples:  Data for TC_01
-
-        | ssnNumber | firstname | lastname | address       | mobilePhone  | username | email       | password |
-       |           |           |          |               |              |          |             |          |
+#eger konfirmation messagi gormezse assert edecez gorursek assert etmeyecez ama onu nasil alacaz
+        | ssnNumber   | firstname | lastname | address       | mobilePhone  | username | email       | password |
+        |             |           |          |               |              |          |             |          |
 #        |           | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |
 #        | 1585-785A |           | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |
 #        | 1585-785. | Thomas    |          | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |
-        | 158-57-8512 | Thomas    | Ziegler  |               | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |
-        | 158-57-8513 | Thomas    | Ziegler  | Mainstreet 55 |              | thozie   | jokl@gmx.de | 123456   |
-#        | 1585-785. | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 |          | jokl@gmx.de | 123456   |
+        | 158-57-8515 | Thomas    | Ziegler  |               | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |
+        | 158-57-8516 | Thomas    | Ziegler  | Mainstreet 55 |              | thozie   | jokl@gmx.de | 123456   |
+##        | 1585-785. | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 |          | jokl@gmx.de | 123456   |
 #        | 1585-785. | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   |             | 123456   |
 #        | 1585-785. | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de |          |
 #        | 1585-785. | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |

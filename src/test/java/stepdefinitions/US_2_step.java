@@ -203,13 +203,11 @@ public class US_2_step {
     @And("user enters firstname {string}")
     public void userEntersFirstname(String first) {
         registrationPage.firstname.sendKeys(first);
-
     }
 
     @And("user enters lastname {string}")
     public void userEntersLastname(String last) {
         registrationPage.lastname.sendKeys(last);
-
     }
 
     @And("user enters address {string}")
