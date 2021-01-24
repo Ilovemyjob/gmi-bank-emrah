@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import sun.security.mscapi.CPublicKey;
 import utilities.Driver;
 
 public class SignIn {
@@ -20,4 +19,13 @@ public class SignIn {
     public WebElement forgetPassword;
     @FindBy(xpath = "(//div[@class='alert alert-warning fade show'])[2]")
     public WebElement registerButton;
+
+    @FindBy(xpath ="//strong[.='Failed to sign in!']")
+    public static WebElement errorMesagge;
+
+    @FindBy(xpath ="//class[.='invalid-feedback']")
+    public WebElement userErrorMesagge;
+
+    @FindBy(xpath ="//div[@class='Toastify__toast-body']")
+    public WebElement successPopUpMessage;
 }

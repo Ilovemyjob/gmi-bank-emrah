@@ -16,4 +16,5 @@ public class ManageCustomerPage {
     @FindBy(xpath = "//th")
     public WebElement listOfHeaders;
 
+
 }
