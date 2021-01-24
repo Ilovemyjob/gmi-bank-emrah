@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import org.apache.poi.ss.formula.functions.T;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -20,11 +21,8 @@ public class US_16 {
     SignIn signIn =new SignIn();
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @And("user navigate to  the user page")
-    public void userNavigateToTheUserPage() {
 
 
-    }
 
     @And("user go to transfer money page")
     public void userGoToTransferMoneyPage() {
@@ -40,7 +38,7 @@ public class US_16 {
     }
 
     @And("user should see at least two account")
-    public void userShouldSeeAtLeastAccount( ) {
+    public void userShouldSeeAtLeastTwoAccount( ) {
 
         customerPage.fromAccount.click();
         Select options = new Select(customerPage.fromAccount);
@@ -49,9 +47,6 @@ public class US_16 {
 
     }
 
-    @Given("user Go to https:\\/\\/gmibank.com\\/")
-    public void userGoToHttpsGmibankCom() {
-    }
 
     @And("user can select first account")
     public void userCanSelectFirstAccount() throws InterruptedException {
@@ -79,9 +74,6 @@ public class US_16 {
 
     }
 
-    @And("user select first box")
-    public void userSelectFirstBox() {
-    }
 
     @And("user select second box")
     public void userSelectSecondBox() {
@@ -108,8 +100,9 @@ public class US_16 {
     }
 
     @And("user make transfer")
-    public void userMakeTransfer() {
-
+    public void userMakeTransfer() throws InterruptedException {
+        customerPage.MakeTransfer.click();
+        Thread.sleep(1000);
        Assert.assertTrue(customerPage.successfull.isDisplayed());
 
     }
