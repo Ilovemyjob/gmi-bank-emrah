@@ -1,9 +1,4 @@
 package runners;
-
-
-
-
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -20,7 +15,11 @@ import utilities.ReusableMethods;
                     "junit:target/xml-report/cucumber.xml" },
             features = "src/test/resources/features",
             glue = "stepdefinitions",
+<<<<<<< HEAD
             tags = "@T28-117",
+=======
+            tags = "@T28-70",
+>>>>>>> master
             dryRun = false,
             publish = false
     )

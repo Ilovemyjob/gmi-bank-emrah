@@ -211,6 +211,14 @@ import java.util.function.Function;
             }
         }
 
+        public void printData(int row, int column){
+            String xpath = "//tbody//tr["+row+"]//td["+column+"]";
+            WebElement data = Driver.getDriver().findElement(By.xpath(xpath));
+            System.out.println(data.getText());
+
+        }
+
+
         public static void getDataTable(List<Map<String, Object>> dataTable, Object name) {
             name = dataTable.get(0).get("name");
         }
@@ -252,5 +260,5 @@ import java.util.function.Function;
             signIn.signInButton.click();
         }
 
-    }
 
+    }
