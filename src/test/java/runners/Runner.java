@@ -17,7 +17,7 @@ import utilities.ReusableMethods;
             glue = "stepdefinitions",
             tags = "@T28-70",
             dryRun = false,
-            publish = true
+            publish = false
     )
     public class Runner {
     }
