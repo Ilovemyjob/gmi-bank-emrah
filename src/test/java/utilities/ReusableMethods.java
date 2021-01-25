@@ -7,6 +7,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import pages.HomePage;
+import pages.SignIn;
 
 import java.io.File;
 import java.io.IOException;
@@ -208,9 +210,33 @@ import java.util.function.Function;
             }
         }
 
+        public void printData(int row, int column){
+            String xpath = "//tbody//tr["+row+"]//td["+column+"]";
+            WebElement data = Driver.getDriver().findElement(By.xpath(xpath));
+            System.out.println(data.getText());
+
+        }
+
+
         public static void getDataTable(List<Map<String, Object>> dataTable, Object name) {
             name = dataTable.get(0).get("name");
         }
+
+
+//        public static void clickWithTimeOut(WebElement element, int timeout) {
+//            for (int i = 0; i < timeout; i++) {
+//                try {
+//                    element.click();
+//                    return;
+//                } catch (WebDriverException e) {
+//                    wait(1);
+//                }
+//            }
+//        }
+
+//
+
+
         public static void loginWithUsernameAndPassword(String username,String password){
             WebDriver driver = new ChromeDriver();
             driver.get(ConfigReader.getProperty("gmi_url"));
@@ -218,5 +244,20 @@ import java.util.function.Function;
             Driver.getDriver().findElement(By.id("login-item")).click();
            // Driver.getDriver().findElement(By.id(""))
         }
-    }
+        //you can sign in to GmiBank app using this method with different role
+        public static void signInToApp(String username, String password) {
+            SignIn signIn = new SignIn();
+            HomePage homePage = new HomePage();
+            Driver.getDriver().get(ConfigReader.getProperty("gmi_url"));
+            ReusableMethods.waitFor(2);
+            homePage.userIcon.click();
+            ReusableMethods.waitFor(2);
+            homePage.signIn.click();
 
+            signIn.usernameBox.sendKeys(username);
+            signIn.passwordBox.sendKeys(password);
+            signIn.signInButton.click();
+        }
+
+
+    }
