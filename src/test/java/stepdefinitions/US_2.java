@@ -5,10 +5,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.RegistrationPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class US_2 {
 
@@ -114,12 +118,27 @@ public class US_2 {
     @And("user should not registration")
     public void userShouldNotRegistration() {
 
-        Assert.assertTrue(registrationPage.message.isDisplayed());
-        //  ReusableMethods.waitForVisibility(registrationPage.succesPopUP, 10);
-        ReusableMethods.waitFor(3);
-        if (registrationPage.succesPopUP.isDisplayed()) {
-            Assert.assertFalse(registrationPage.succesPopUP.isDisplayed());
-        }
+        List<WebElement> elementExist = Driver.getDriver().findElements(By.xpath("//div[@class='Toastify_toast Toastify_toast--success toastify-toast']"));
+
+        if(elementExist.size()>0) {
+            Assert.assertFalse(registrationPage.Alert.isDisplayed());
+            System.out.println("user registired with blank box");
+        }else
+            Assert.assertTrue(registrationPage.message.isDisplayed());
+
+
+//        Assert.assertTrue(registrationPage.message.isDisplayed());
+//        //  ReusableMethods.waitForVisibility(registrationPage.succesPopUP, 10);
+//        ReusableMethods.waitFor(3);
+//        if (registrationPage.succesPopUP.isDisplayed()) {
+//            Assert.assertFalse(registrationPage.succesPopUP.isDisplayed());
+//        }
+    //    List<WebElement> Alert = Driver.getDriver().findElements(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]"));
+//        if(elementExist.size()>0) {
+//            Assert.assertTrue(registrationPage.succesPopUP.isDisplayed());
+//            System.out.println("user registired with blank box");
+//        }else
+//            Assert.assertFalse(registrationPage.message.isDisplayed());
 
 
         //  Assert.assertFalse(registrationPage.greenApproveMessage.isDisplayed());
@@ -127,6 +146,7 @@ public class US_2 {
 
 
     }
+
 
 }
 

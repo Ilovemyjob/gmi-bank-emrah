@@ -22,10 +22,10 @@ Examples:  Data for TC_01
 #eger konfirmation messagi gormezse assert edecez gorursek assert etmeyecez ama onu nasil alacaz
 | ssnNumber | firstname | lastname | address       | mobilePhone  | username | email       | password | password2 |
 #|           |           |          |               |              |          |             | 123456   |    123456       |
-#|           | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   | 123456    |
-| 158-78- |           | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |     123456      |
+|           | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   | 123456    |
+#| 158-78- |           | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |     123456      |
 #| 158-78- | Thomas    |          | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |    123456       |
-#| 158-57- | Thomas    | Ziegler  |               | 123-456-7890 | thozie   | jokl@gmx.de | 123456   | 123456    |
+| 158-57-1234 | Thomas    | Ziegler  |               | 123-456-7890 | thozie   | jokl@gmx.de | 123456   | 123456    |
 #| 158-57-   | Thomas    | Ziegler  | Mainstreet 55 |              | thozie   | jokl@gmx.de | 123456   |  123456         |
 #| 158-57-   | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 |          | jokl@gmx.de | 123456   |   123456        |
 #| 158-57-   | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   |             | 123456   |   123456        |
