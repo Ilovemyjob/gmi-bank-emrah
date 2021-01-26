@@ -18,7 +18,7 @@ Feature: US_001 Success register with valid credentials
     And User type valid second password "<secondPassword>"
     Then Assert that all data is valid
     Examples:
-      | ssn         | name | lastname | address              | mobile phone number | username     | email                  | firstPassword | secondPassword |
+      | ssn     | name | lastname | address              | mobile phone number | username     | email                  | firstPassword | secondPassword |
       | 223-58- | John | Black    | Flower street. No 23 | 456-589-5986        | johnblack001 | johnblack001@gmail.com | 123456.Aa     | 123456.Aa      |
 
 

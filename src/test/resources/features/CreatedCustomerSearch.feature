@@ -12,6 +12,6 @@ Feature: Create a new customer
     And user clicks sign in button
     And user clicks on manage customer
     And user clics on create a new customer
-    And user type ssn number into ssnBox "111-22-3333"
+    And user type ssn number into ssnBox "555-55-5555"
     And user clicks on search button
     Then user verify that all user data provided

@@ -55,5 +55,6 @@ public class CreateOrEditAccountPage {
     public WebElement save;
     @FindBy(id = "cancel-save")
     public WebElement back;
-}
+
+   }
 

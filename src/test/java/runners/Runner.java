@@ -16,7 +16,11 @@ import utilities.ReusableMethods;
             features = "src/test/resources/features",
             glue = "stepdefinitions",
 
-            tags = "@user2",
+            tags = "@TC_1004",
+
+
+       
+
 
             dryRun = false,
             publish = false
