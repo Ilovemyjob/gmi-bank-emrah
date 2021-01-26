@@ -45,7 +45,6 @@ public class US_2 {
         public WebElement mobilephonetext;
         @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
         public WebElement ssntext;
-
         @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
         public WebElement firstnametext;
         @FindBy(xpath = "//div[contains(text(),'Your Last Name is required')]")

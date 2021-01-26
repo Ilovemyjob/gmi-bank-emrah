@@ -15,7 +15,9 @@ import utilities.ReusableMethods;
                     "junit:target/xml-report/cucumber.xml" },
             features = "src/test/resources/features",
             glue = "stepdefinitions",
-            tags = "@T28-70",
+
+            tags = "@user2",
+
             dryRun = false,
             publish = false
     )
