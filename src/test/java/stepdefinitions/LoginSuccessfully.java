@@ -35,12 +35,12 @@ public class LoginSuccessfully {
     @Given("user provide valid username")
     public void user_provide_valid_username() {
         ReusableMethods.waitForVisibility(signIn.usernameBox,5);
-        signIn.usernameBox.sendKeys("employeeT28");
+        signIn.usernameBox.sendKeys("adminteam28");
     }
 
     @Given("user provide valid password")
     public void user_provide_valid_password() {
-       signIn.passwordBox.sendKeys("employee28");
+       signIn.passwordBox.sendKeys("team28europe");
     }
 
     @Given("user clicks sign in button")
