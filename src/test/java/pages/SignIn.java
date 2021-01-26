@@ -19,4 +19,13 @@ public class SignIn {
     public WebElement forgetPassword;
     @FindBy(xpath = "(//div[@class='alert alert-warning fade show'])[2]")
     public WebElement registerButton;
+
+    @FindBy(xpath ="//strong[.='Failed to sign in!']")
+    public static WebElement errorMesagge;
+
+    @FindBy(xpath ="//class[.='invalid-feedback']")
+    public WebElement userErrorMesagge;
+
+    @FindBy(xpath ="//div[@class='Toastify__toast-body']")
+    public WebElement successPopUpMessage;
 }

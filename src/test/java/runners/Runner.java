@@ -1,9 +1,4 @@
 package runners;
-
-
-
-
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -20,9 +15,15 @@ import utilities.ReusableMethods;
                     "junit:target/xml-report/cucumber.xml" },
             features = "src/test/resources/features",
             glue = "stepdefinitions",
-            tags = "@mali",
+
+            tags = "@TC_1004",
+
+
+       
+
+
             dryRun = false,
-            publish = true
+            publish = false
     )
     public class Runner {
     }
