@@ -16,4 +16,6 @@ class HomePage {
     public WebElement signIn;
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement register;
+    @FindBy(xpath = "(//li[@class='dropdown show nav-item']/div/a)[1]")
+    public WebElement userInfoLink;
 }
