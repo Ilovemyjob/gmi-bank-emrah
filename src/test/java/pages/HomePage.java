@@ -17,6 +17,10 @@ class HomePage {
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement register;
 
+    @FindBy(xpath = "(//li[@class='dropdown show nav-item']/div/a)[1]")
+    public WebElement userInfoLink;
+
+
 
     //======================== Manage customer locators============
     @FindBy(xpath = "//*[@class='table']/tbody/tr[9]/td[1]/a")
@@ -77,4 +81,5 @@ class HomePage {
     public WebElement saveButtonEditPage;
     @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
     public WebElement succesPopUP;
+
 }
