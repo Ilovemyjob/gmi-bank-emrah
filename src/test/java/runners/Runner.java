@@ -20,9 +20,9 @@ import utilities.ReusableMethods;
                     "junit:target/xml-report/cucumber.xml" },
             features = "src/test/resources/features",
             glue = "stepdefinitions",
-            tags = "@mali",
+            tags = "@us11",
             dryRun = false,
-            publish = true
+            publish = false
     )
     public class Runner {
     }
