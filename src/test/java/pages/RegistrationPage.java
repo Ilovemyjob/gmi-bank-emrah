@@ -65,5 +65,19 @@ public RegistrationPage(){
     @FindBy(xpath = "//*[contains(text(),'Registration saved!')]")
     public WebElement greenApproveMessage;
 
+
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
+    public WebElement Alert;
+    @FindBy(xpath = "//div[@style='pointer-events: none']")
+    public WebElement pointer;
+
+
+    @FindBy(xpath = "//*[contains(text(),'translation-not-found[error.ssnexists]')]")
+    public WebElement redApproveMessage;
+
+    @FindBy(xpath = "//div[@class='Toastify_toast Toastify_toast--success toastify-toast']")
+    public WebElement succesPopUP;
+
 }
 
