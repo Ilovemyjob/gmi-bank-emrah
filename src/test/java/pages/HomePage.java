@@ -19,6 +19,7 @@ class HomePage {
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement register;
 
+
     @FindBy (xpath = "//li[@id='account-menu']")
     public WebElement accountMenuAfterLogin;
     @FindBy (xpath = "(//a[@class='dropdown-item'])[4]")
@@ -35,6 +36,11 @@ class HomePage {
     public WebElement greenApproveMessage;
     @FindBy(xpath = "//li[@class='point']")
     public List<WebElement> passwordStrengthScala;
+
+    @FindBy(xpath = "(//li[@class='dropdown show nav-item']/div/a)[1]")
+    public WebElement userInfoLink;
+
+
 
 
     //======================== Manage customer locators============
@@ -96,4 +102,5 @@ class HomePage {
     public WebElement saveButtonEditPage;
     @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
     public WebElement succesPopUP;
+
 }
