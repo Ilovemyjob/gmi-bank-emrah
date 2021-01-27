@@ -14,7 +14,7 @@ import utilities.ReusableMethods;
 public class US_11_Stepdefinitions {
     US_11_Page us_11_page=new US_11_Page();
     Actions actions=new Actions(Driver.getDriver());
-    private ConfigReader ConfigurationReader;
+    //private ConfigReader ConfigurationReader;
 
     @Given("user enters gmibank homepage")
     public void user_enters_gmibank_homepage() {
@@ -131,8 +131,8 @@ public class US_11_Stepdefinitions {
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         us_11_page.zelleEnrolledBox.click();
     }
-    @Given("user clicks on save button")
-    public void user_clicks_on_save_button () {
+    @Given("user click on save button")
+    public void user_click_on_save_button () {
         us_11_page.saveButton.click();
     }
     @Given("user verifies is selected")
