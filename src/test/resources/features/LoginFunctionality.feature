@@ -1,13 +1,25 @@
-@T28-91
-Feature: Negative test for Login
 
-  Background:
-      #@PRECOND_T28-27
+#US04 & us5
+Feature: Positive test for Login
+
+  Background:user should be on homapage
+		#@PRECOND_T28-27
     Given user is on GmiBank hompage
     Given user clicks user icon
     Given user clicks sign in
-
-   #invalid username
+#US04
+  @TEST_T28-25 @TESTSET_T28-29
+  Scenario: TC_001 User should access the application with valid credentials
+    Given user provide valid username
+    Given user provide valid password
+    Given user clicks sign in button
+    Then user should be on user page
+  @TEST_T28-26 @TESTSET_T28-29
+  Scenario: TC_002 User can cancel to login with cancel button
+    Given user clicks cancel button
+    Then user should be on home page
+#US5
+    #invalid username
   @TEST_T28-33 @TESTSET_T28-89
   Scenario: TC_001 User cannot login with invalid username validating the error message
     Given user provide invalid username

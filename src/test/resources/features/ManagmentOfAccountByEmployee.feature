@@ -1,9 +1,7 @@
-@US_10
-
-Feature: Address of customer can be created
-
+@T28-70
+#US09 & us10
+Feature: Create a new customer
   Background:
-
     Given user is on GmiBank hompage
     And user clicks user icon
     And user clicks sign in
@@ -12,7 +10,13 @@ Feature: Address of customer can be created
     And user clicks sign in button
     And user clicks on manage customer
     And user clics on create a new customer
+#us09 =====================================
+  Scenario: User can search for a new applicant by their SSN and see all their registration info populated
+    And user type ssn number into ssnBox "555-55-5555"
+    And user clicks on search button
+    Then user verify that all user data provided
 
+ #us10 ==============================================
   @TC_1001
   Scenario: Address as street and number should be provided  and cannot be left blank
     Given user clicks in address box
@@ -36,6 +40,8 @@ Feature: Address of customer can be created
     Given user type all valid data without state
     And user clicks on save button
     Then verify success massege not displayed
+
+
 
 
 

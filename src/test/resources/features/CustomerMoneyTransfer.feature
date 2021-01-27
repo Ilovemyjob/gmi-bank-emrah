@@ -1,4 +1,5 @@
 @T28-117
+	#US16
 Feature: Test Execution for Test Plan T28-116
 
 	Background:
@@ -30,7 +31,7 @@ Feature: Test Execution for Test Plan T28-116
 		    And user select second box
 		    And user type balance
 		    And user make transfer without description
-	@TEST_T28-103
+	@demo
 	Scenario: "User can make sure transfer is done successfully validating the message  an amount of the transaction"
 		Given user click account box
 		    And user can select first account
