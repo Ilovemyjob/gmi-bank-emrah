@@ -4,7 +4,7 @@ Feature: Go to Registration Page
     Given User go to GMI BAnk homepage
     And User go to Registration page
 
-  @user2
+
 Scenario Outline: TC_01_deneme Any field on the registration page should not be left blank
 And User enters SSN number "<ssnNumber>"
 And user enters firstname "<firstname>"
@@ -33,7 +33,7 @@ Examples:  Data for TC_01
 #| 158-57-   | Thomas    | Ziegler  | Mainstreet 55 | 123-456-7890 | thozie   | jokl@gmx.de | 123456   |           |
 
 
-
+  @user2
 Scenario Outline: TC_02 SSN number cannot be of any chars nor spec chars except "-"
 
 And User enters SSN number "<ssnNumber>"
@@ -55,7 +55,7 @@ Examples:  Data for TC_02
 #        |1585-785.  | Thomas    | Ziegler   |Mainstreet 55 | 123-456-7890   | thozie    | jokl@gmx.de  | 123456   |
 #        |1585-785A  | Thomas    | Ziegler   |Mainstreet 55 | 123-456-7890   | thozie    | jokl@gmx.de  | 123456   |
 
-
+  @user2
 Scenario Outline: TC_03 Mobilephone number cannot be of any chars nor spec chars except "-"
 
 And User enters SSN number "<ssnNumber>"
@@ -79,7 +79,7 @@ Examples:  Data for TC_03
 
 
 
-
+  @user2
 Scenario Outline: TC_04 email id cannot be created without "@" sign and "." extensions
 
 And User enters SSN number "<ssnNumber>"
