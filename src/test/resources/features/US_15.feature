@@ -8,16 +8,15 @@ Feature: US_15
     Then click on Sign in
     Then click on My operations
     Then click on My Accounts
-    Then verify if account able to see all accounts
+    Then verify if account able to see all accounts <account>
     Then check if View Transaction is click able
-    Then close browser
     Examples:
-      | username | password |
-      | omer__3  | omer__3  |
-      | omer__4  | omer__4  |
-      | omer__5  | omer__5  |
-      | omer__6  | omer__6  |
-      | omer__7  | omer__7  |
-      | omer__8  | omer__8  |
-      | omer__9  | omer__9  |
+      | username | password | account |
+      | omer__3  | omer__3  | 0       |
+      | omer__4  | omer__4  | 4       |
+      | omer__5  | omer__5  | 2       |
+      | omer__6  | omer__6  | 2       |
+      | omer__7  | omer__7  | 2       |
+      | omer__8  | omer__8  | 1       |
+      | omer__9  | omer__9  | 1       |
 
