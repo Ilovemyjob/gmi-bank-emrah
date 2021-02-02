@@ -1,5 +1,5 @@
 @T28-70
-#US09 & us10
+#US09 & us10 #us11
 Feature: Create a new customer
   Background:
     Given user is on GmiBank hompage
