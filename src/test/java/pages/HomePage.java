@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public
 
 class HomePage {
@@ -16,6 +18,29 @@ class HomePage {
     public WebElement signIn;
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement register;
+
+
+    @FindBy (xpath = "//li[@id='account-menu']")
+    public WebElement accountMenuAfterLogin;
+    @FindBy (xpath = "(//a[@class='dropdown-item'])[4]")
+    public WebElement passwordManaging;
+    @FindBy (xpath = "//input[@name='currentPassword']")
+    public WebElement currentPassEditig;
+    @FindBy (xpath = "//input[@name='newPassword']")
+    public WebElement newPassword;
+    @FindBy (xpath = "//input[@name='confirmPassword']")
+    public WebElement newPasswordConfirm;
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement savePasswordButton;
+    @FindBy (xpath = "//div[@role='alert']")
+    public WebElement greenApproveMessage;
+    @FindBy(xpath = "//li[@class='point']")
+    public List<WebElement> passwordStrengthScala;
+
+    @FindBy(xpath = "(//li[@class='dropdown show nav-item']/div/a)[1]")
+    public WebElement userInfoLink;
+
+
 
 
     //======================== Manage customer locators============
@@ -77,4 +102,5 @@ class HomePage {
     public WebElement saveButtonEditPage;
     @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
     public WebElement succesPopUP;
+
 }

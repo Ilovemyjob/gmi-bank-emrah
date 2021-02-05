@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.CreateOrEditCustomerPage;
 import pages.ManageCustomerPage;
+import utilities.ReusableMethods;
 
 public class CreatedCustomerSearch {
 
@@ -33,12 +34,19 @@ public class CreatedCustomerSearch {
     @Given("user clicks on search button")
     public void user_clicks_on_search_button() {
         createOrEditCustomerPage.searchSSNbutton.click();
+        ReusableMethods.waitFor(2);
 
     }
 
     @Then("user verify that all user data provided")
     public void user_verify_that_all_user_data_provided() {
-        Assert.assertTrue(createOrEditCustomerPage.createFirstName.getText().equals(""));
+        System.out.println("******");
+        System.out.println(createOrEditCustomerPage.createFirstName.getAttribute("value"));
+        System.out.println("******");
+        System.out.println("******");
+        System.out.println(createOrEditCustomerPage.createFirstName.getAttribute("class"));
+        System.out.println("******");
+        Assert.assertTrue(createOrEditCustomerPage.createFirstName.getAttribute("value").equals("zehra"));
 
     }
 }
