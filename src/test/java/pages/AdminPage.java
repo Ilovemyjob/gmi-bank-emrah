@@ -71,4 +71,7 @@ public class AdminPage {
 
     @FindBy(xpath = "(//a[@class='dropdown-item'])[11]")
     public WebElement Sign_Out;
+
+    @FindBy (xpath = "//span[@class]/span[.='Edit']")
+    public WebElement Edit;
 }
