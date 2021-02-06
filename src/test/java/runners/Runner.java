@@ -16,7 +16,7 @@ import utilities.ReusableMethods;
             features = "src/test/resources/features",
             glue = "stepdefinitions",
             tags = "@demo",
-            dryRun = false,
+            dryRun = true,
             publish = false
     )
     public class Runner {

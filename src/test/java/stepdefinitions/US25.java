@@ -23,14 +23,14 @@ import static io.restassured.RestAssured.given;
                     auth().
                     oauth2(ConfigReader.getProperty("token")).
                     when().
-                    get(ConfigReader.getProperty("endpoint_countries"));
+                    get(ConfigReader.getProperty("countries_endpoint"));
             //    response.prettyPrint();
         }
 
         @And("User can Just create each country {int} by {int}")
         public void userCanJustCreateEachCountryBy(int arg0, int arg1) {
             Map<String, Object> map = new HashMap<>();
-            map.put("name", "Mali");
+            map.put("name", "Emr");
             map.put("states", null);
             response_post=given().
                     contentType(ContentType.JSON).
@@ -38,12 +38,12 @@ import static io.restassured.RestAssured.given;
                     oauth2(ConfigReader.getProperty("token")).
                     when().
                     body(map).
-                    post(ConfigReader.getProperty("endpoint_countries"));
+                    post(ConfigReader.getProperty("countries_endpoint"));
             response_post.prettyPrint();
         }
         @Then("User validate country which is created")
         public void userValidateCountryWhichIsCreated() {
-            Assert.assertTrue(response_post.asString().contains("Mali"));
+            Assert.assertTrue(response_post.asString().contains("Emr"));
         }
     }
 
