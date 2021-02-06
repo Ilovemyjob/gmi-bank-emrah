@@ -42,6 +42,10 @@ public class Countries {
         this.name = name;
         this.states = states;
     }
+    public Countries(String name) {
+        this.name = name;
+
+    }
 
     public Countries(Integer id, String name, Object states) {
         this.id = id;
