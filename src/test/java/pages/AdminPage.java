@@ -71,4 +71,27 @@ public class AdminPage {
 
     @FindBy(xpath = "(//a[@class='dropdown-item'])[11]")
     public WebElement Sign_Out;
+
+    @FindBy (xpath = "//span[@class]/span[.='Edit']")
+    public WebElement Edit;
+
+    @FindBy (xpath = "//option[@value='ROLE_ADMIN']")
+    public WebElement ROLE_ADMIN;
+
+    @FindBy (xpath = "//option[@value='ROLE_EMPLOYEE']")
+    public WebElement ROLE_EMPLOYEE;
+
+    @FindBy (xpath = "//option[@value='ROLE_CUSTOMER']")
+    public WebElement ROLE_CUSTOMER;
+
+    @FindBy (xpath = "//option[@value='ROLE_MANAGER']")
+    public WebElement ROLE_MANAGER;
+
+    @FindBy (xpath = "//span[@class]/span[.='View']")
+    public WebElement View;
+
+    @FindBy (xpath = "//span[@class]/span[.='Delete']")
+    public WebElement Delete;
+
+
 }
