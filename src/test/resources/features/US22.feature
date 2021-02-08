@@ -1,5 +1,5 @@
 Feature:System should allow to read states using api end point
-
+  @demo
   Scenario:Read all customers you created and validate them from your data set
     Given User set the state api end point with valid token
     And User deserilializing all data to Java
