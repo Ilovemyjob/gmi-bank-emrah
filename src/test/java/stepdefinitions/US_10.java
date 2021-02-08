@@ -57,7 +57,7 @@ public class US_10 {
 
     @Given("user clicks on save button")
     public void user_clicks_on_save_button() {
-        createOrEditCustomerPage.searchSave.click();
+        createOrEditCustomerPage.SaveButton.click();
 
     }
     @Then("verify success massege not displayed")

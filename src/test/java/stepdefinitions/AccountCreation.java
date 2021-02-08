@@ -3,10 +3,12 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.CreateOrEditAccountPage;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
 import java.util.ArrayList;
@@ -108,7 +110,7 @@ public class AccountCreation {
         Select select = new Select(accountCreation.employee);
         dropdownElement = select.getOptions();
         select.selectByVisibleText("Saski");
-
+        accountCreation.save.click();
 //        if(dropdownElement.size()==0){
 //            Assert.assertTrue(false);
 //        }
@@ -119,6 +121,7 @@ public class AccountCreation {
     public void verify_that_employee_selected(String string) {
         //Assert.assertEquals(accountCreation.employee.getText(), string);
         Assert.assertTrue(accountCreation.employee.getText().contains(string));
+        Driver.getDriver().findElement(By.id("save-entity")).click();
     }
 
 

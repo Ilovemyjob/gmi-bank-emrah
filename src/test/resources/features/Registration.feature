@@ -9,6 +9,9 @@ Feature: US_001 Success register with valid credentials
 
   @TC28-63..69
   Scenario Outline: User should type all valid data
+    Given user is on GmiBank hompage
+    And user clicks user icon
+    Then user clicks on register link
     Given User type valid SSN in "<ssn>"
     And User type valid name in "<name>"
     And User type valid lastname in "<lastname>"

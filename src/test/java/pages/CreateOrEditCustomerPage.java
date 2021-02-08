@@ -49,7 +49,7 @@ public class CreateOrEditCustomerPage {
         @FindBy (id = "cancel-save")
         public WebElement buttonBack;
         @FindBy (id = "save-entity")
-        public WebElement searchSave;
+        public WebElement SaveButton;
     @FindBy (className = "invalid-feedback")
     public WebElement blankAddressError;
     @FindBy (className = "invalid-feedback")
