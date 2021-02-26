@@ -33,12 +33,11 @@ public class US_22 {
     //    response_post.prettyPrint();
 
     }
-    List<Object> actualAllStates = new ArrayList<>();
+    List<Integer> actualAllStates = new ArrayList<>();
 
     @Given("User deserilializing all data to Java")
     public void user_deserilializing_all_data_to_java() throws IOException {
        // JsonPath jsonPath = response_post.jsonPath();
-
         //jsonPath.prettyPrint();
         //   jsonPath.get();
 
@@ -47,21 +46,12 @@ public class US_22 {
     //    System.out.println(states.toString());
       //  System.out.println(states[0].getId().toString());
 
-
         for (int i = 0; i < states.length; i++) {
             if(states[i].getId()!=null){
                 actualAllStates.add(states[i].getId());
-//            allList.add(states[i].getTpcountry());
-//            allList.add(states[i].getName());
-
             }
-
-
-
         }
-
         System.out.println(actualAllStates);
-
 
     }
 
@@ -69,22 +59,15 @@ public class US_22 {
     public void user_set_all_state_information_to_related_files() {
 
         WriteToTxt.statesInfo("C:\\Users\\Administrator\\IdeaProjects\\gmi-bank-emrah\\StatesInfo.txt",states);
-
-
-
     }
-    List<Object> expectedAllStates= ReadToTxt.returnAllStates("C:\\Users\\Administrator\\IdeaProjects\\gmi-bank-emrah\\StatesInfo.txt");
+    List<Integer> expectedAllStates= ReadToTxt.returnAllStates("C:\\Users\\Administrator\\IdeaProjects\\gmi-bank-emrah\\StatesInfo.txt");
 
     @Given("User validata states from data set")
     public void user_validata_states_from_data_set() {
-
-
         System.out.println(expectedAllStates);
 
-      //  Assert.assertEquals("not verift",expectedAllStates ,actualAllStates);
-        Assert.assertTrue(actualAllStates.containsAll(expectedAllStates));
-
-
+        Assert.assertEquals("not verift",expectedAllStates ,actualAllStates);
+        //Assert.assertTrue(actualAllStates.containsAll(expectedAllStates));
     }
 
     @Given("User validate states one by one")

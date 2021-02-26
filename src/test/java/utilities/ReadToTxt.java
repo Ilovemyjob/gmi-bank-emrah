@@ -9,15 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadToTxt {
-    public static List<Object> returnAllStates(String filePath)  {
+    public static List<Integer> returnAllStates(String filePath)  {
 
-        List<Object> allStatesIds =new ArrayList<>();
+        List<Integer> allStatesIds =new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line =reader.readLine();
               //  System.out.println(line);
-
             int i =0;
             while (line !=null){
                 String temp = "";
@@ -25,16 +24,16 @@ public class ReadToTxt {
 
                 sb.append(System.lineSeparator())    ;
                 line=reader.readLine();
-
               //  System.out.println(i++);
-
-                allStatesIds.add(temp);
+                allStatesIds.add(Integer.valueOf(temp));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
         return allStatesIds;
     }
+
+
     public static List<States>  returnAllCountries(String filePath)  {
 
         List<States> allStates =new ArrayList<>();
