@@ -19,6 +19,8 @@ public class EmployeePage {
     public WebElement manageAccountAsEmployee;
     @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
     public WebElement manageCustomerAsEmployee;
+    @FindBy (id = "jh-create-entity")
+    public WebElement createCustomerButton;
     
 
 }
